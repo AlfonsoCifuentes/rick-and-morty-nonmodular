@@ -1,0 +1,26 @@
+.heroMainDiv{ 
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    img{
+     padding-top: 4rem;
+    max-width: 66%;
+    max-height: 30%;
+    }
+    .heroDiv{
+        h3{
+            margin-top: -1rem;
+            color: rgb(137, 180, 94);
+        }
+        background-color: rgba(3, 3, 3, 0.705);
+        width: 70%;
+        height: 50%;
+        border-radius: 25px;
+        border: chartreuse 5px solid;
+        padding: 0.7rem;
+        
+    }
+}

@@ -1,0 +1,39 @@
+.mainmainDiv{
+    padding-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    .mainDiv{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        h3{
+            margin-top: -1rem;
+            color: rgb(137, 180, 94);
+        }
+        background-color: rgba(3, 3, 3, 0.705);
+        width: 92%;
+        height: 50%;
+        border-radius: 25px;
+        border: chartreuse 5px solid;
+        padding: 0.7rem;
+        margin-right: -2rem;
+        .contentsDiv{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction:row;
+            justify-content: center;
+            width:80%;
+            background-color: rgba(4, 134, 0, 0.534);
+            border: chartreuse 5px solid;
+
+        }
+        
+    }
+
+
+}
