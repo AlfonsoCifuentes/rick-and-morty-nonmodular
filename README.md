@@ -1,160 +1,65 @@
-# 🚀 Rick and Morty Non-Modular
+# Rick and Morty Non-Modular
 
-> **Una implementación alternativa de la aplicación Rick and Morty sin arquitectura modular, perfecta para estudiar diferencias arquitectónicas en Angular**
+> Estudio Comparativo de Arquitecturas Angular: Monolítica vs Modular
 
-[![Angular](https://img.shields.io/badge/Angular-13.0-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.io/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-4.4-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![SCSS](https://img.shields.io/badge/SCSS-Styling-CF649A?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
+## Resumen
 
-## 🌟 Características Principales
+Una implementación estratégica de la aplicación Rick and Morty desarrollada con arquitectura no-modular, diseñada específicamente para estudiar y comparar las diferencias arquitectónicas con implementaciones modulares. Este proyecto sirve como caso de estudio para entender las ventajas y desventajas de diferentes enfoques arquitectónicos en Angular.
 
-### 🎯 **Objetivos Educativos**
-- **🏗️ Arquitectura Monolítica**: Desarrollo sin módulos separados
-- **📦 Single Module**: Todos los componentes en AppModule
-- **🔄 Direct Dependencies**: Importaciones directas sin lazy loading
-- **🎓 Learning Comparison**: Comparar con versión modular
+## Valor del proyecto
 
-### 🛠️ **Diferencias Arquitectónicas**
+Proporciona insights valiosos sobre decisiones arquitectónicas, ayuda en la toma de decisiones técnicas para proyectos escalables, y demuestra comprensión profunda de patrones arquitectónicos.
 
-#### **Estructura No Modular**
-```typescript
-// app.module.ts - Todo en un módulo
-@NgModule({
-  declarations: [
-    AppComponent,
-    CharacterListComponent,
-    CharacterDetailComponent,
-    SearchComponent,
-    // Todos los componentes declarados aquí
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
+Este repositorio resume una pieza de producto pensada para explicar el problema, la solucion aplicada y el criterio tecnico detras de la implementacion.
 
-## 🏗️ Arquitectura del Proyecto
+## Funcionalidades o puntos fuertes
 
-### 📁 **Estructura Simplificada**
-```
-src/app/
-├── components/
-│   ├── character-list/     # Lista de personajes
-│   ├── character-detail/   # Detalle de personaje
-│   ├── search/             # Componente de búsqueda
-│   └── shared/             # Componentes compartidos
-├── services/
-│   └── rick-morty.service.ts
-├── models/
-│   └── character.interface.ts
-├── app-routing.module.ts
-└── app.module.ts          # Módulo único
-```
+- Arquitectura monolítica para comparación educativa
+- Integración completa con Rick and Morty API
+- Sistema de comparación arquitectónica documentado
+- Implementación de las mismas funcionalidades sin modularización
+- Análisis de rendimiento entre arquitecturas
+- Documentación de trade-offs arquitectónicos
+- Interface funcional para exploración de personajes
 
-### ⚡ **Ventajas del Enfoque No Modular**
-- **🚀 Simplicidad**: Configuración más directa
-- **🔍 Debugging**: Más fácil de debuggear
-- **📚 Learning**: Ideal para principiantes
-- **⚡ Rapidez**: Desarrollo más rápido para proyectos pequeños
+## Stack principal
 
-### ⚠️ **Limitaciones**
-- **📦 Bundle Size**: Carga toda la aplicación de una vez
-- **🔄 No Lazy Loading**: Sin optimizaciones de carga
-- **🧩 Scalability**: Menos escalable para proyectos grandes
-- **🔧 Maintenance**: Más difícil de mantener a largo plazo
+- Angular
+- TypeScript
+- Monolithic Architecture
+- Component Design
+- API Integration
+- Rick and Morty API
+- Comparative Architecture
+- HTML5
 
-## 🎯 Funcionalidades
+## Como explorar este proyecto
 
-### 🏠 **Página Principal**
-- Landing page con información de la serie
-- Navegación directa a personajes
-- Diseño responsive y atractivo
+- Revisar la propuesta funcional y el enfoque visual o tecnico principal.
+- Identificar las decisiones de arquitectura, estructura o integracion que sostienen la experiencia.
+- Usar la demo o el codigo como base para evolucionar el proyecto hacia una version mas amplia.
 
-### 👥 **Lista de Personajes**
-- Catálogo completo de personajes
-- Paginación tradicional
-- Filtros básicos
+## Ficha rapida
 
-### 🔍 **Búsqueda**
-- Búsqueda en tiempo real
-- Filtros por estado y especie
-- Resultados instantáneos
+| Campo | Detalle |
+| --- | --- |
+| Repositorio | rick-and-morty-nonmodular |
+| Categoria | Web Development |
+| Grupo | Proyectos Web |
+| Complejidad | Intermediate |
+| Lenguaje principal | TypeScript |
+| Primera version | 20 de diciembre de 2021 |
+| Ultima actualizacion | 12 de mayo de 2026 |
 
-### 📱 **Detalle de Personaje**
-- Información completa del personaje
-- Episodios en los que aparece
-- Navegación entre personajes
+## Enlaces
 
-## 🚀 Instalación
+- Demo en vivo: https://rick-and-morty-nonmodular.vercel.app
+- Repositorio: https://github.com/AlfonsoCifuentes/rick-and-morty-nonmodular
 
-```bash
-# Clonar repositorio
-git clone https://github.com/AlfonsoCifuentes/rick-and-morty-nonmodular.git
+## Tags
 
-# Instalar dependencias
-npm install
+- portfolio
 
-# Ejecutar aplicación
-ng serve
-```
+## Nota
 
-## 📊 Comparación con Versión Modular
-
-| Aspecto | No Modular | Modular |
-|---------|------------|---------|
-| Bundle Initial | Mayor | Menor |
-| Lazy Loading | No | Sí |
-| Complejidad | Baja | Media |
-| Mantenimiento | Difícil | Fácil |
-| Performance | Menor | Mayor |
-| Escalabilidad | Limitada | Alta |
-
-## 🎯 Casos de Uso Ideales
-
-### ✅ **Cuándo Usar**
-- Proyectos pequeños y simples
-- Prototipos rápidos
-- Aplicaciones de aprendizaje
-- MVPs básicos
-
-### ❌ **Cuándo NO Usar**
-- Aplicaciones enterprise
-- Equipos grandes de desarrollo
-- Proyectos con crecimiento esperado
-- Aplicaciones con múltiples rutas complejas
-
-## 🏆 Valor Educativo
-
-### 📚 **Conceptos Aprendidos**
-- **🏗️ Arquitectura Angular**: Diferencias entre enfoques
-- **📦 Module System**: Importancia de la modularización
-- **⚡ Performance**: Impacto en el rendimiento
-- **🔧 Maintenance**: Facilidad de mantenimiento
-
-### 🎯 **Objetivos Alcanzados**
-- **📖 Understanding**: Comprensión profunda de módulos Angular
-- **⚖️ Trade-offs**: Análisis de pros y contras
-- **🎓 Best Practices**: Cuándo aplicar cada enfoque
-- **🔍 Debugging**: Técnicas de depuración simplificadas
-
-## 🔗 Enlaces
-
-- **🐙 Repositorio**: [GitHub](https://github.com/AlfonsoCifuentes/rick-and-morty-nonmodular)
-- **🔄 Versión Modular**: [rick-and-morty](https://github.com/AlfonsoCifuentes/rick-and-morty)
-- **🌐 Rick and Morty API**: [Documentation](https://rickandmortyapi.com/)
-
----
-
-<div align="center">
-
-**📚 Proyecto educativo para comparar arquitecturas Angular 📚**
-
-*Understanding the trade-offs between modular and non-modular approaches*
-
-</div>
+Este README se ha generado a partir del catalogo enriquecido del portfolio para mantener una descripcion consistente, explicativa y lista para evolucionar en cada repositorio.
